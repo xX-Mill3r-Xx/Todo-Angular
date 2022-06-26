@@ -313,8 +313,13 @@
 </head>
 <body>
   <header>
-    <h1>Meu primeiro componente</h1>
+    <h1 style="text-align: center;">{{ title }}</h1>
   </header>
+  <main>
+    <ul>
+      <li *ngFor="let todo of todos">{{ todos }}</li>
+    </ul>
+  </main>
 </body>
 </html>
 

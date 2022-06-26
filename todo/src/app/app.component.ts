@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public todos: any[] = []; // o tipo any significa um obj que pode ser qualquer coisa
+  public title: String = 'Minhas Tarefas'
 
   constructor() {
     this.todos.push('passear com o cachorro');
