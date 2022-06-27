@@ -317,7 +317,9 @@
   </header>
   <main>
     <ul>
-      <li *ngFor="let todo of todos">{{ todos }}</li>
+      <li *ngFor="let todo of todos">
+        {{ todo.id }} - {{ todo.title }} - | <button>Concluir</button> | <button>Remover</button>
+      </li>
     </ul>
   </main>
 </body>

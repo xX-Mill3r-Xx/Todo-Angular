@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from 'src/models/todo.model';
 
 @Component({
   selector: 'app-root', // <app-root> tag html
@@ -6,12 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public todos: any[] = []; // o tipo any significa um obj que pode ser qualquer coisa
+  public todos: Todo[] = []; // o tipo any significa um obj que pode ser qualquer coisa
   public title: String = 'Minhas Tarefas'
 
   constructor() {
-    this.todos.push('passear com o cachorro');
-    this.todos.push('ir ao supermercado');
-    this.todos.push('cortar o cabelo');
+    this.todos.push(new Todo(1, 'Passear com o cachorro', false));
+    this.todos.push(new Todo(2, 'Ir ao supermercado', false));
+    this.todos.push(new Todo(3, 'Cortar o Cabelo', true));
   }
 }
