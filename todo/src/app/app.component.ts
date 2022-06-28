@@ -10,7 +10,7 @@ import { Todo } from 'src/models/todo.model';
 export class AppComponent {
   public todos: Todo[] = []; // o tipo any significa um obj que pode ser qualquer coisa
   public title: String = 'Minhas Tarefas';
-  public form!: FormGroup;
+  public form: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -20,9 +20,17 @@ export class AppComponent {
         Validators.required,
       ])]
     });
-    this.todos.push(new Todo(1, 'Passear com o cachorro', false));
-    this.todos.push(new Todo(2, 'Ir ao supermercado', false));
-    this.todos.push(new Todo(3, 'Cortar o Cabelo', true));
+  }
+
+  add(){
+    const title = this.form.controls['title'].value;
+    const id = this.todos.length + 1;
+    this.todos.push(new Todo(id, title, false))
+    this.clear();
+  }
+  
+  clear(){
+    this.form.reset();
   }
 
   remove(todo: Todo){
