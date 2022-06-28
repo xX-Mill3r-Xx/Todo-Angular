@@ -15,4 +15,16 @@ export class AppComponent {
     this.todos.push(new Todo(2, 'Ir ao supermercado', false));
     this.todos.push(new Todo(3, 'Cortar o Cabelo', true));
   }
+
+  remove(){
+
+  }
+
+  markAsDone(){
+
+  }
+
+  markAsUndone(){
+
+  }
 }
