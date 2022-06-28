@@ -201,7 +201,7 @@
   }
 
   .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
     color: white;
     padding: 0 1rem 1rem;
     margin: 0;
@@ -245,16 +245,16 @@
     align-items: center;
     font-size: 12px;
     padding: 3px 10px;
-    border: 1px solid rgba(27,31,35,.2);
+    border: 1px solid rgba(27, 31, 35, .2);
     border-radius: 3px;
-    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
     margin-left: 4px;
     font-weight: 600;
   }
 
   .github-star-badge:hover {
-    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
+    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+    border-color: rgba(27, 31, 35, .35);
     background-position: -.5em;
   }
 
@@ -274,7 +274,8 @@
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
-    .card-container > *:not(.circle-link) ,
+
+    .card-container>*:not(.circle-link),
     .terminal {
       width: 100%;
     }
@@ -305,12 +306,14 @@
 <!-- Toolbar -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <header>
     <h1 style="text-align: center;">{{ title }}</h1>
@@ -318,9 +321,9 @@
   <main>
     <ul>
       <li *ngFor="let todo of todos">
-        {{ todo.id }} - {{ todo.title }} - | 
+        {{ todo.id }} - {{ todo.title }} - |
         <button *ngIf="!todo.done" (click)="markAsDone(todo)">Concluir</button> |
-        <button *ngIf="todo.done" (click)="markAsUndone(todo)">Refazer</button> | 
+        <button *ngIf="todo.done" (click)="markAsUndone(todo)">Refazer</button> |
         <button (click)="remove(todo)">Remover</button>
       </li>
     </ul>
@@ -328,14 +331,15 @@
     <form [formGroup]="form">
       <fieldset>
         <label>Tarefa: </label>
-        <input type="text" placeholder="Titulo da tarefa" 
-        maxlength="60" formControlName="title">
+        <input type="text" placeholder="Titulo da tarefa" maxlength="60" formControlName="title">
+        <small ngSwitch="form.controls.title.invalid && !form.contros.title.pristine">Este compo deve conter entre 3 e 60 caracteres</small>
         <button>Salvar</button>
       </fieldset>
     </form>
 
   </main>
 </body>
+
 </html>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -345,4 +349,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
