@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    text-align: center;
+    background: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header h1{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300px;
+    text-align: center;
+    text-shadow: 1px 1px 1px orangered;
+}
+
+form > fieldset{
+    border-radius: 5px;
+    border-color: orange;
+    box-shadow: 1px 1px 1px orangered;
+    background-color: rgb(45, 45, 45);
+    padding: 10px;
+    margin: 10px;
+}
+
+fieldset>button{
+    border: none;
+    float: right;
+    margin: 2px;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+
+ul{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background-color: rgb(45, 45, 45);
+    border-radius: 5px;
+    border: 2px solid orange;
+    box-shadow: 1px 1px 1px orangered;
+}
+
+li{
+    padding: 10px;
+    margin: 10px;
+    font-size: medium;
+    font-weight: 100px;
+}
+
+li>button{
+    border: none;
+    float: right;
+    margin: 2px;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+
+li:hover{
+    cursor: pointer;
+    color: rgb(148, 240, 11);
+}
+
+button{
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 1px orangered;
+    border-radius: 5px;
+}
+
+button:hover{
+    color: white;
+    background-color: orangered;
+    cursor: pointer;
+}
+
+
