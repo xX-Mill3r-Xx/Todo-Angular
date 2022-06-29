@@ -333,11 +333,14 @@
       <fieldset>
         <label>Tarefa: </label>
         <input type="text" placeholder="Titulo da tarefa" maxlength="60" formControlName="title">
-        <small>Este compo deve conter entre 3 e 60 caracteres</small>
+        <small> Este compo deve conter entre 3 e 60 caracteres</small>
         <button [disabled]="form.invalid" (click)="add()">Salvar</button>
       </fieldset>
     </form>
   </main>
+  <footer>
+    <p>2022 - Miller Vasco</p>
+  </footer>
 </body>
 
 </html>

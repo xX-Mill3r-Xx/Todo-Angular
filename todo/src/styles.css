@@ -29,6 +29,13 @@ form > fieldset{
     margin: 10px;
 }
 
+input{
+    border: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
 fieldset>button{
     border: none;
     float: right;
@@ -56,11 +63,10 @@ li{
 }
 
 li>button{
+    font: bolder;
     border: none;
     float: right;
     margin: 2px;
-    opacity: 0.6;
-    transition: opacity 1s;
 }
 
 li:hover{
@@ -79,6 +85,16 @@ button:hover{
     color: white;
     background-color: orangered;
     cursor: pointer;
+}
+
+footer{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300px;
+    text-align: center;
+    text-shadow: 1px 1px 1px orangered;
 }
 
 
